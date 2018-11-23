@@ -1,0 +1,25 @@
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+  datasource:
+      url: jdbc:mysql://localhost:3305/ssmtest
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+
+
+mybatis:
+  mapper-locations: mapper/*.xml
+
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+
+##控制台打印sql语句--测试的时候用
+logging:
+  level:
+    com.example.ssmcrud.mapper: debug
